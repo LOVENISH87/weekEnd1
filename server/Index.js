@@ -48,7 +48,10 @@ import express from 'express';
 import { MongoClient } from 'mongodb';
 import cors from 'cors';
 
+import Postrouter from './Routes/posts.js';
+
 const app = express();
+app.use('/posts', Postrouter)
 app.use(cors());
 app.use(express.json());
 
